@@ -1,0 +1,14 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@3.0.0
+  android: circleci/android@0.2.1
+
+jobs:
+  build:
+    executor: android/android
+
+    steps:
+      - checkout
+      - run:
+          command: npm install
